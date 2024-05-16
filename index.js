@@ -4,21 +4,22 @@ const cors = require('cors');
 
 const { dbConnection } = require('./database/config');
 
-//crear servidor de express
+//create express server
 const app = express();
 
-//configurar cors
+//config cors
 app.use(cors());
 
-//lectura de body 
+//read body 
 app.use(express.json());
 
-//base de datos
+//DB
 dbConnection();
 
-//Ruta
-
+//Routes
+app.use('/api/users', require('./routes/users'));
+app.use('/api/search', require('./routes/search'));
 
 app.listen(process.env.PORT, () => {
-    console.log("servidor corriendo en puerto " + process.env.PORT)
+    console.log("server running port " + process.env.PORT)
 })

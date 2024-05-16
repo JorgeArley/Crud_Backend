@@ -1,0 +1,29 @@
+Get = localhost:3000/api/users?from=0&to=15
+
+Post = http://localhost:3000/api/users
+  {
+    "name": "string",
+    "url_image": "string",
+    "role": "string",
+    "status": boolean,
+    "social_profile": ["string"],
+    "promote": boolean,
+    "rating": number,
+    "last_login": "string"
+  }
+
+Put = http://localhost:3000/api/users/664619e410a922a8e4bd6630
+    {
+    "name": "string",
+    "url_image": "string",
+    "role": "string",
+    "status": boolean,
+    "social_profile": ["string"],
+    "promote": boolean,
+    "rating": number,
+    "last_login": "string"
+  }
+
+Delete = http://localhost:3000/api/users/6646146f4915ba53aa95eef6
+
+Search = localhost:3000/api/search/"nameuser"
